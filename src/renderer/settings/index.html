@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'" />
+    <title>Dangle</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Dangle</h1>
+      <p id="summary"></p>
+    </header>
+
+    <section>
+      <div class="row head">
+        <h2>Characters</h2>
+        <div class="buttons">
+          <button id="all">Show all</button>
+          <button id="none">Remove all</button>
+        </div>
+      </div>
+      <div id="cast" class="cast"></div>
+    </section>
+
+    <section class="options">
+      <label class="row"><span>Wander around on their own</span><input id="roam" type="checkbox" class="switch" /></label>
+      <label class="row"><span>Hide everyone for now</span><input id="hidden" type="checkbox" class="switch" /></label>
+      <label class="row"><span>Open at login</span><input id="login" type="checkbox" class="switch" /></label>
+    </section>
+
+    <footer>
+      <button id="home">Gather in the top right</button>
+      <button id="quit">Quit Dangle</button>
+    </footer>
+    <p class="hint">Drag a character to move it, double-click for a trick, right-click for more. Closing this window leaves them hanging.</p>
+
+    <script src="main.js"></script>
+  </body>
+</html>

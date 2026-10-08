@@ -1,0 +1,18 @@
+{
+  "name": "dangle",
+  "productName": "Dangle",
+  "version": "1.0.0",
+  "description": "Little characters that hang from the top of your screen and swing around",
+  "main": "src/main/index.js",
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "npm run build:mac && npm run build:win",
+    "build:mac": "electron-packager . --platform=darwin --arch=universal --out=dist --overwrite --ignore=^/dist --ignore=^/scripts --icon=assets/icon.icns --app-bundle-id=com.dangle.app && codesign --force --deep --sign - \"dist/Dangle-darwin-universal/Dangle.app\"",
+    "build:win": "electron-packager . --platform=win32 --arch=x64 --out=dist --overwrite --ignore=^/dist --ignore=^/scripts --icon=assets/icon.ico"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@electron/packager": "^20.3.0",
+    "electron": "^44.5.1"
+  }
+}
